@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Fav Food Spot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🍔 Your Fav Food Spot</h1>
+
+        <p class="subtitle">
+            Explore new food spots or stick with your favorite!
+        </p>
+
+        <div class="game-info">
+            <div>
+                <span>Visit</span>
+                <strong id="round">1 / 30</strong>
+            </div>
+
+            <div>
+                <span>Total Satisfaction</span>
+                <strong id="score">⭐ 0</strong>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <h2>How to Play</h2>
+            <p>
+                Try different food spots to learn how much you enjoy them.
+                You can <b>explore</b> a new spot or <b>exploit</b> a spot
+                that has already given you good ratings.
+            </p>
+        </div>
+
+        <h2>Where do you want to eat?</h2>
+
+        <div class="food-grid">
+
+            <button class="food-card" onclick="chooseFood(0)">
+                <div class="emoji">🍔</div>
+                <h3>McDonald's</h3>
+                <p id="stats-0">Unknown — Try it!</p>
+                <span class="visit-button">VISIT</span>
+            </button>
+
+            <button class="food-card" onclick="chooseFood(1)">
+                <div class="emoji">👑</div>
+                <h3>Burger King</h3>
+                <p id="stats-1">Unknown — Try it!</p>
+                <span class="visit-button">VISIT</span>
+            </button>
+
+            <button class="food-card" onclick="chooseFood(2)">
+                <div class="emoji">🥙</div>
+                <h3>Leon Grill</h3>
+                <p id="stats-2">Unknown — Try it!</p>
+                <span class="visit-button">VISIT</span>
+            </button>
+
+            <button class="food-card" onclick="chooseFood(3)">
+                <div class="emoji">🌮</div>
+                <h3>Taco Bell</h3>
+                <p id="stats-3">Unknown — Try it!</p>
+                <span class="visit-button">VISIT</span>
+            </button>
+
+        </div>
+
+        <div id="result" class="result hidden">
+            <h2 id="result-title"></h2>
+            <div id="stars" class="stars"></div>
+            <p id="result-message"></p>
+            <button onclick="continueGame()" class="continue-button">
+                Continue →
+            </button>
+        </div>
+
+        <div class="history">
+            <h2>📋 Recent Visits</h2>
+            <div id="history-list">
+                <p class="empty">Your food history will appear here.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
